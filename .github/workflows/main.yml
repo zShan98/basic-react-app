@@ -33,11 +33,10 @@ jobs:
           cmd: install
           
       - name: build react app
-        run: npm run build
+        run: yarn build
         
-      - name: Install surge
+      - name: install surge
         run: npm install -global surge
         
       - name: deploy to surge
-        run:  surge ./build Zeeshanclass003workdone.surge.sh --token ${{secrets.SURGE_TOKEN}}
- 
+        run:  surge ./build class002workdone.surge.sh --token ${{secrets.SURGE_TOKEN}}
