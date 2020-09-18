@@ -15,7 +15,7 @@ function App(data) {
       <ol type= "1;">
         <li><i><strong><a href="https://www.youtube.com">This Link is a Pop-up</a></strong></i></li>
         <li><i><strong>This is not a pop-up </strong></i></li>
-        <li>My Name is {data.name} & Age is {data.age}</li>
+        <li><i><strong>My Name is {data.name} & Age is {data.age}</strong></i></li>
       </ol> 
       
     </div>
