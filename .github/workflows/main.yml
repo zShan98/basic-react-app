@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: deploying react app on surge
+name: deploying ract app on surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -32,10 +32,12 @@ jobs:
         with:
           cmd: install
           
-      
+      - name: build react app
+        run: yarn build
         
       - name: install surge
         run: npm install -global surge
         
       - name: deploy to surge
-        run:  surge ./ class003assignment.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run:  surge ./build class003workdone.surge.sh --token ${{secrets.SURGE_TOKEN}}
+ 
